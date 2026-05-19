@@ -242,9 +242,13 @@ const ProjectDetail = () => {
                     <p className="text-xs text-slate-500 font-medium">
                       Members
                     </p>
-                    <p className="text-base sm:text-lg font-bold text-slate-900">
-                      {project?.members?.length}
-                    </p>
+                  <p className="text-base sm:text-lg font-bold text-slate-900">
+  {new Set(
+    tasks
+      .filter(t => t.assignedTo)
+      .map(t => t.assignedTo._id)
+  ).size}
+</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
