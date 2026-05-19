@@ -42,16 +42,7 @@ const Navbar = () => {
               >
                 Dashboard
               </NavLink>
-              <NavLink
-                to="/projects"
-                className={`px-4 sm:px-6 py-2 rounded-lg text-sm sm:text-md font-medium transition-all duration-200 ${
-                  isActive("/projects") || isActive("/projects/")
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
-                    : "text-gray-300 hover:bg-slate-700 hover:text-white"
-                }`}
-              >
-                Projects
-              </NavLink>
+           
               {user?.role !== "admin" && (
                 <NavLink
                   to="/tasks/my-tasks"
@@ -65,6 +56,17 @@ const Navbar = () => {
                 </NavLink>
               )}
               {user?.role === "admin" && (
+                <>
+                   <NavLink
+                to="/projects"
+                className={`px-4 sm:px-6 py-2 rounded-lg text-sm sm:text-md font-medium transition-all duration-200 ${
+                  isActive("/projects") || isActive("/projects/")
+                    ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
+                    : "text-gray-300 hover:bg-slate-700 hover:text-white"
+                }`}
+              >
+                Projects
+              </NavLink>
                 <NavLink
                   to="/admin/users"
                   className={`px-4 sm:px-6 py-2 rounded-lg text-sm sm:text-md font-medium transition-all duration-200 ${
@@ -75,6 +77,7 @@ const Navbar = () => {
                 >
                   Users
                 </NavLink>
+                </>
               )}
             </div>
           </div>

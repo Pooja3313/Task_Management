@@ -79,43 +79,7 @@ const Projects = () => {
             <p className="text-slate-600">Manage your projects and track progress</p>
           </div>
 
-          {/* Stats Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
-            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 border border-slate-200 hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs sm:text-sm font-medium text-slate-600 mb-1">Total Projects</p>
-                  <p className="text-2xl sm:text-3xl font-bold text-slate-900">{stats.total}</p>
-                </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                  <FolderOpen className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 border border-slate-200 hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs sm:text-sm font-medium text-slate-600 mb-1">Active Projects</p>
-                  <p className="text-2xl sm:text-3xl font-bold text-slate-900">{stats.active}</p>
-                </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/30">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 border border-slate-200 hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs sm:text-sm font-medium text-slate-600 mb-1">Total Tasks</p>
-                  <p className="text-2xl sm:text-3xl font-bold text-slate-900">{stats.totalTasks}</p>
-                </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
-                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+         
           {/* Header with Create Button */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800">All Projects</h2>
