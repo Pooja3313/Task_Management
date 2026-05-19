@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const errorHandler = require('./middleware/errorHandler');
+const path = require('path');
 
 // Import routes
 const authRoutes = require('./routes/auth');
@@ -27,6 +28,12 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+
+
+app.use(express.static(path.join(__dirname, '../client/dist')));
+app.get('/{*path}', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+});
 
 
 

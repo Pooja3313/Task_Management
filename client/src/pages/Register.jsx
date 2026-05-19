@@ -152,7 +152,7 @@ const Register = () => {
         </div>
 
         <p className="text-center mt-6 text-slate-400 text-xs">
-          © 2024 TeamTask. All rights reserved.
+          ? 2024 TeamTask. All rights reserved.
         </p>
       </div>
     </div>
