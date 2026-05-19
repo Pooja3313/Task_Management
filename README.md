@@ -38,7 +38,7 @@ Edit the `.env` file with your MongoDB Atlas connection string:
 ```env
 PORT=5000
 MONGODB_URI=mongodb+srv://your_username:your_password@your_cluster.mongodb.net/teamtaskmanager?retryWrites=true&w=majority
-JWT_SECRET=your_jwt_secret_key_here_change_this_in_production
+JWT_SECRET=POOJASORATHIYA33
 JWT_EXPIRE=7d
 ```
 
@@ -54,11 +54,8 @@ The client `.env` file is already configured:
 VITE_API_URL=http://localhost:5000/api
 ```
 
-#### 4. Seed the Database (Optional - Creates Sample Data)
-```bash
-cd server
-npm run seed
-```
+
+
 This creates:
 - 1 Admin user: `admin@test.com` / `admin123`
 - 2 Member users: `member1@test.com` / `member123`, `member2@test.com` / `member123`
