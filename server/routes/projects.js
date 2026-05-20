@@ -11,7 +11,6 @@ router.post('/', adminOnly, projectController.createProject);
 router.get('/:id', projectController.getProjectById);
 router.put('/:id', adminOnly, projectController.updateProject);
 router.delete('/:id', adminOnly, projectController.deleteProject);
-router.post('/:id/members', adminOnly, projectController.addMember);
-router.delete('/:id/members/:userId', adminOnly, projectController.removeMember);
+
 
 module.exports = router;
